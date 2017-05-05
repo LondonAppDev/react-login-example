@@ -22,11 +22,17 @@ const buttonStyle = {
 
 class LoginForm extends Component {
 
+  handleFormSubmit(e) {
+    e.preventDefault();
+
+    console.log("FORM SUBMIT!");
+  }
+
   render() {
     return (
       <div style={divStyle}>
         <Panel style={panelStyle}>
-          <Form horizontal className="LoginForm">
+          <Form horizontal className="LoginForm" id="loginForm">
             <FormGroup controlId="formEmail">
               <FormControl type="email" placeholder="Email Address" />
             </FormGroup>
@@ -34,7 +40,7 @@ class LoginForm extends Component {
               <FormControl type="password" placeholder="Password" />
             </FormGroup>
             <FormGroup style={buttonStyle} controlId="formSubmit">
-              <Button bsStyle="primary" type="submit">
+              <Button bsStyle="primary" type="submit" onClick={this.handleFormSubmit}>
                 Login
               </Button>
             </FormGroup>

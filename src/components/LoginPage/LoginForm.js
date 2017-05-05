@@ -26,6 +26,7 @@ class LoginForm extends Component {
     e.preventDefault();
 
     console.log("FORM SUBMIT!");
+
   }
 
   render() {

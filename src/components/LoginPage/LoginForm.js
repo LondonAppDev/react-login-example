@@ -4,15 +4,21 @@ import { Panel, Form, FormGroup, FormControl, Button } from 'react-bootstrap';
 
 const divStyle = {
   display: 'flex',
-  alignItems: 'center'
+  alignItems: 'center',
+  marginTop: -100
 };
 
 const panelStyle = {
   backgroundColor: 'rgba(255,255,255,0.5)',
   border: 0,
   paddingLeft: 20,
-  paddingRight: 20
-}
+  paddingRight: 20,
+  width: 300,
+};
+
+const buttonStyle = {
+  marginBottom: 0
+};
 
 class LoginForm extends Component {
 
@@ -25,10 +31,10 @@ class LoginForm extends Component {
               <FormControl type="email" placeholder="Email Address" />
             </FormGroup>
             <FormGroup controlId="formPassword">
-              <FormControl type="password" placeholder="password" />
+              <FormControl type="password" placeholder="Password" />
             </FormGroup>
-            <FormGroup controlId="formSubmit">
-              <Button type="submit">
+            <FormGroup style={buttonStyle} controlId="formSubmit">
+              <Button bsStyle="primary" type="submit">
                 Login
               </Button>
             </FormGroup>
